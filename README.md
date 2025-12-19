@@ -8,8 +8,8 @@ Welcome to the **Wan Image Generation** repository! This collection of Google Co
 
 ## 🚀 Key Features
 
-*   **State-of-the-Art Generation**: Utilizes the Wan 2.2 model for superior image quality.
-*   **User-Friendly Interface**: Integrated **Gradio** controls for a seamless interactive experience directly within Colab.
+*   **State-of-the-Art Generation**: Utilizes the **Wan 2.2** model for superior image and latent generation.
+*   **Dual Interface**: Control generation via user-friendly **Gradio Web UI** or **Telegram Bot**.
 *   **Flexible Modes**: Dedicated notebooks for both creating images from scratch and transforming existing images.
 
 ---
@@ -42,10 +42,24 @@ Transform existing images into new creations based on text prompts.
 
 ---
 
+## ⚙️ Configuration (Required)
+
+To use the Telegram Bot features, you MUST configure a Bot Token:
+
+1.  **Get a Token**: Open Telegram and chat with **[@BotFather](https://t.me/BotFather)**. Send the command `/newbot` to create a bot and receive your `HTTP API TOKEN`.
+2.  **Set Token in Colab**:
+    *   Open the desired notebook.
+    *   Locate the cell defining `BOT_TOKEN` (usually near the end).
+    *   Replace `"YOUR_BOT_TOKEN_HERE"` with your actual token.
+    *   *Example*: `BOT_TOKEN = "123456789:ABCdefGhIJKlmNoPQRstuVWxyz"`
+
+---
+
 ## 🛠️ Usage Tips
 
-*   **Runtime Type**: Ensure you are using a GPU runtime in Google Colab for faster generation. (Runtime > Change runtime type > T4 GPU or better).
-*   **Google Drive**: You may need to mount Google Drive to save your generated outputs permanently.
+*   **First Run**: The first execution will download the **Wan 2.2 Model** (approx. several GB) from Hugging Face. Please be patient.
+*   **Runtime Type**: Ensure you are using a GPU runtime in Google Colab (Runtime > Change runtime type > **T4 GPU** or better).
+*   **Google Drive**: Mount Google Drive to save your generated outputs permanently.
 
 ## 🤝 Contributing
 
